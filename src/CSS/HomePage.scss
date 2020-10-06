@@ -76,11 +76,14 @@ p.inline{
        
         span:nth-child(1){
             margin: 0 8px 0 4px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
             font-weight: 300
         }
     }
    
     span:nth-child(2){
+        font-size: 14px;
         opacity: .5;
         font-weight: 400;
     }
