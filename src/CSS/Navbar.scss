@@ -1,0 +1,23 @@
+nav.headdingPage{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: calc(100% - 78px);
+    z-index: 20;
+    padding: 16px 39px 16px 39px;;
+    color: white;
+}
+.contentNav{
+    // padding: 0 39px 0 39px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-heading{
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.link-home-page{
+    color: inherit;
+}

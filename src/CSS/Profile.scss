@@ -1,0 +1,70 @@
+.profile-app{
+    position: relative;
+    height: 100%;
+}
+.banner-box{
+    min-height: 600px;
+    position: relative;
+    background-image: url('https://demos.creative-tim.com/nextjs-argon-dashboard/_next/static/images/profile-cover-e2582654b8e7b6c285d5017df6427d73.jpg');
+    background-size: cover;
+    width: 100%;
+    color: white;
+    // border: 2px solid;
+}
+.banner-profile{
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    left: 0%;
+    top:50%;
+    transform: translate(0%, -50%);
+    z-index: 1;
+    padding:16px 39px;
+    // transform: translate(-50%, -50%);
+    .text{
+        display: flex;
+        flex-wrap: wrap;
+        color: white;
+        span{
+            width: 100%;
+        }
+        span:nth-child(1){
+            font-weight: 600;
+            margin: 0 0 8px;
+            font-size:44px
+        }
+        span:nth-child(2){
+            font-size:16px
+        }
+        span:nth-child(3){
+            font-size:16px;
+            margin:0 0 48px;
+        }
+    }
+    .button{
+        font-size:14px;
+        padding:10px 20px;
+        width: 120px;
+        height: 43px;
+        color:white;
+        background: #11CDEF;
+        border-radius: 4px;
+        font-weight: 600;
+        outline: none;
+        border: none;
+    }
+    .button:hover{
+            transform:translateY(-1px);
+            // opacity: .8;
+            cursor: pointer;
+    }
+    .button:active{
+        background-color: #0da5c0;
+    }
+}
+.effect-image {
+    background: linear-gradient(87deg, #172b4d 0, #1a174d 100%) !important;
+    opacity: 0.9;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
