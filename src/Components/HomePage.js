@@ -342,7 +342,7 @@ class HomePage extends Component {
         return (
             <div class='main-content'>
                 <div className='cols home-card-status'>
-                    <NavBar />
+                    <NavBar header='dash board'/>
                     <div className='cols home-content'>
                         {this.createCardStatus(0)}
                         {this.createCardStatus(1)}

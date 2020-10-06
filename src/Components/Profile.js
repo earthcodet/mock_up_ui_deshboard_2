@@ -6,7 +6,7 @@ class Profile extends Component {
     render() {
         return (
             <div className='profile-app'>
-                <MainNavBar />
+                <MainNavBar header='user profile' />
 
                 <div className='banner-box'>
                     <span className='effect-image'></span>
