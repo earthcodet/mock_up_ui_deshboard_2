@@ -222,39 +222,7 @@ button.main-button-table:hover{
 .home-chart-line-box.home-chart-body:nth-child(2) {
     display: none;
 } 
-.home-footer{
-    padding: 40px 54px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: auto;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    p.left{
-        a{
-            margin-left: 0.25rem;
-            color: #5e72e4;
-            font-weight: 600;
-        }
-        a:hover{
-            color: #233dd2;
-        }
-    }
-    p.right{
-        a{
-          padding: 4px 12px
-        }
-    }
-    a, a:link{
-        text-decoration: none;
-        cursor: pointer;
-        color: #8898aa;
-    }
-    a:hover, a:link:hover{
-        color: #525f7f ;
-    }
-}
+
 .home-table-body{
     width: 100%;
     table{

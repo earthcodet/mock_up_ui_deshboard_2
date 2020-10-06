@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 
 import '../CSS/HomePage.scss'
 import NavBar from './MainNavBar'
+
 // Echarts
+import MainFooter from './MainFooter'
 import ReactEcharts from 'echarts-for-react';
 import $ from 'jquery'
 
@@ -537,19 +539,7 @@ class HomePage extends Component {
                     </div>
                 
                 </div>
-                {/* <div className='cols home-chart-content box2'> </div> */}
-                <div className='cols home-footer'>
-                    <p className='left'>
-                        <span>© 2020</span>
-                        <a href='https://www.google.com'>Creative Tim</a>
-                    </p>
-                    <p className='right'>
-                        <a>Creative Tim</a>
-                        <a>About Us</a>
-                        <a>Blog</a>
-                        <a>MIT License</a>
-                    </p>
-                </div>
+               <MainFooter />
             </div>
         )
     }

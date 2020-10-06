@@ -1,0 +1,36 @@
+.home-footer{
+    padding: 40px 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    p.left{
+        span{
+            opacity: .5;
+        }
+        a{
+            margin-left: 0.25rem;
+            color: #5e72e4;
+            font-weight: 600;
+        }
+        a:hover{
+            color: #233dd2;
+        }
+    }
+    p.right{
+        a{
+          padding: 4px 12px
+        }
+    }
+    a, a:link{
+        text-decoration: none;
+        cursor: pointer;
+        color: #8898aa;
+    }
+    a:hover, a:link:hover{
+        color: #525f7f ;
+    }
+}
