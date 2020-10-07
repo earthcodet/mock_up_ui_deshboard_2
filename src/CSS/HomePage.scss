@@ -8,6 +8,35 @@
 .padding{
     padding:10px;
 }
+.pb-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.process-bar-box{
+    margin-left: 10px;
+    width: 100px;
+    height: 3px;
+    background-color: #d9dbde;
+    .process-bar-item{
+        height: 100%;
+    }
+    .process-bar-item.color-box1{
+        background-color:#f55d38 ;
+    }
+    .process-bar-item.color-box2{
+        background-color: #2dce9c;
+    }
+    .process-bar-item.color-box3{
+        background-color: #5e72e4;
+    }
+    .process-bar-item.color-box4{
+        background-color: #11b3ef;
+    }
+    .process-bar-item.color-box5{
+        background-color: #fc8c40;
+    }
+}
 .box-status-card-content{
     // height: 50px;
     padding:16px 24px;
