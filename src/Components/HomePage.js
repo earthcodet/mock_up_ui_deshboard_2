@@ -23,13 +23,15 @@ class HomePage extends Component {
             isOptionChart: {
                 responsive: true,
                 grid: {
-                    // top:0
-                    x: 30,
-                    right: 0
+                    x: 50,
+                    y2: 50,
+                    x2: 10,
                 },
                 xAxis: {
                     type: 'category',
                     data: ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    // max:8,
+                    // splitNumber: 8,
                     axisLine: {
                         show: false
                     },
@@ -43,12 +45,10 @@ class HomePage extends Component {
                         fontFamily: "sans-serif",
                         fontSize: 13,
                         color: '#8898aa',
-                        align: "right",
                         lineHeight: 40
                     }
                 },
                 yAxis: {
-                    // axisLine:false,
                     type: 'value',
                     axisLine: {
                         show: false
@@ -64,7 +64,7 @@ class HomePage extends Component {
                         },
                         fontSize: 13,
                         color: '#8898aa',
-                        align: "left"
+                        align: 'center'
                     },
                     axisTick: {
                         show: false
@@ -77,7 +77,8 @@ class HomePage extends Component {
                     color: '#5e72e4',
                     showSymbol: false,
                     lineStyle: {
-                        width: 5
+                        width: 5,
+                        shadowBlur: 1.3,
                     }
                 }]
             }
@@ -87,8 +88,8 @@ class HomePage extends Component {
         this.onClickTabItem = this.onClickTabItem.bind(this)
         this.changeOptionChart = this.changeOptionChart.bind(this)
     }
-    componentDidMount(){
-       this.changeOptionChart(this.state.isToggleOn)
+    componentDidMount() {
+           this.changeOptionChart(this.state.isToggleOn)
     }
     onClickTabItem(i) {
         console.log(this.state.isOptionChart)
@@ -110,13 +111,13 @@ class HomePage extends Component {
         }
 
     }
-    changeOptionChart(i){
+    changeOptionChart(i) {
         let line_chart_1 = {
             responsive: true,
             grid: {
-                // top:0
-                x: 30,
-                right: 0
+                x: 50,
+                y2: 50,
+                x2: 10
             },
             xAxis: {
                 type: 'category',
@@ -134,12 +135,10 @@ class HomePage extends Component {
                     fontFamily: "sans-serif",
                     fontSize: 13,
                     color: '#8898aa',
-                    align: "right",
                     lineHeight: 40
                 }
             },
             yAxis: {
-                // axisLine:false,
                 type: 'value',
                 axisLine: {
                     show: false
@@ -155,7 +154,7 @@ class HomePage extends Component {
                     },
                     fontSize: 13,
                     color: '#8898aa',
-                    align: "left"
+                    align: "center"
                 },
                 axisTick: {
                     show: false
@@ -168,16 +167,17 @@ class HomePage extends Component {
                 color: '#5e72e4',
                 showSymbol: false,
                 lineStyle: {
-                    width: 5
+                    width: 5,
+                    shadowBlur: 1.3,
                 }
             }]
         };
         let line_chart_2 = {
             responsive: true,
             grid: {
-                // top:0
-                x: 30,
-                right: 0
+                x:50,
+                y2:50,
+                x2:10
             },
             xAxis: {
                 type: 'category',
@@ -195,7 +195,6 @@ class HomePage extends Component {
                     fontFamily: "sans-serif",
                     fontSize: 13,
                     color: '#8898aa',
-                    align: "right",
                     lineHeight: 40
                 }
             },
@@ -216,7 +215,7 @@ class HomePage extends Component {
                     },
                     fontSize: 13,
                     color: '#8898aa',
-                    align: "left"
+                    // align: "center"
                 },
                 axisTick: {
                     show: false
@@ -229,19 +228,20 @@ class HomePage extends Component {
                 color: '#5e72e4',
                 showSymbol: false,
                 lineStyle: {
-                    width: 5
+                    width: 5,
+                    shadowBlur: 1.3,
                 }
             }]
         };
 
-        if(i === 'ONE'){
+        if (i === 'ONE') {
             this.setState({
-                isOptionChart : line_chart_1
+                isOptionChart: line_chart_1
             })
             console.log(this.isOptionChart)
-        }else{
+        } else {
             this.setState({
-                isOptionChart : line_chart_2
+                isOptionChart: line_chart_2
             })
         }
     }
@@ -250,8 +250,9 @@ class HomePage extends Component {
             responsive: true,
             grid: {
                 // top:0
-                x: 50,
-                right: 0
+                x: 40,
+                x2:0
+                // right: 0
             },
             xAxis: {
                 type: 'category',
@@ -311,7 +312,7 @@ class HomePage extends Component {
         }
     }
     createCardStatus(i) {
-        return (<div className='col padding'>
+        return (<div className='col is-4 padding'>
             <div className='box-status-card-content '>
                 <div className='cols'>
                     <div className='col'>
@@ -342,7 +343,7 @@ class HomePage extends Component {
         return (
             <div class='main-content'>
                 <div className='cols home-card-status'>
-                    <NavBar header='dash board'/>
+                    <NavBar header='dash board' />
                     <div className='cols home-content'>
                         {this.createCardStatus(0)}
                         {this.createCardStatus(1)}
@@ -364,8 +365,10 @@ class HomePage extends Component {
                                     </span>
                                     </p>
                                     <div className='right'>
-                                        <button onClick={() => { this.onClickTabItem(1) }} className='main-button active'>Month</button>
-                                        <button onClick={() => { this.onClickTabItem(2) }} className='main-button'>Week</button>
+                                        <button onClick={() => { this.onClickTabItem(1) }} className='main-button desktop active'>Month</button>
+                                        <button onClick={() => { this.onClickTabItem(2) }} className='main-button desktop'>Week</button>
+                                        <button onClick={() => { this.onClickTabItem(1) }} className='main-button moblie active'>M</button>
+                                        <button onClick={() => { this.onClickTabItem(2) }} className='main-button moblie'>W</button>
                                     </div>
                                 </div>
 
@@ -378,7 +381,7 @@ class HomePage extends Component {
 
                             </div>
                         </div>
-                        <div className='col '>
+                        <div className='col is-3'>
                             <div className='home-chart-bar-box'>
                                 <div className='home-chart-bar-box-title'>
                                     <p className='flex'>
@@ -482,7 +485,7 @@ class HomePage extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className='col'>
+                        <div className='col is-3'>
                             <div className='home-box-table'>
                                 <div className='home-table-title'>
                                     <p className='one-line'>
@@ -537,9 +540,9 @@ class HomePage extends Component {
                         </div>
 
                     </div>
-                
+
                 </div>
-               <MainFooter />
+                <MainFooter />
             </div>
         )
     }

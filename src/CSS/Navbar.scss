@@ -109,3 +109,28 @@ nav.headdingPage{
     border-style: solid;
     border-color: transparent transparent white transparent;
 }
+//media
+@media screen and (max-width:1024px){
+    nav.headdingPage{
+        width: 100% !important;
+        
+        .contentNav{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .box-icons-search{
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+    .link-home-page, .box-profile-name{
+        display: none;
+    }
+}
+@media screen and (max-width:768px){
+    .sidebar-content{
+        visibility: hidden;
+    }
+}

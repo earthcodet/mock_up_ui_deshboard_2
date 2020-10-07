@@ -118,11 +118,9 @@ p.inline{
     padding: 0 34px;
     width: auto;
 }
-.home-chart-content, .home-table-content{
-    flex-wrap: initial;
-}
-.home-table-content{
-}
+// .home-chart-content, .home-table-content{
+//     flex-wrap: initial;
+// }
 .home-chart-bar-box{
     border: 2px solid rgba(0, 0, 0, 0.05);
     
@@ -227,12 +225,14 @@ button.main-button-table:hover{
 } 
 
 .home-table-body{
-    width: 100%;
+    overflow: auto;
+    box-sizing: border-box;
     table{
         font-family: 'Open Sans', sans-serif;
         border-collapse: collapse;
         width: 100%;
         text-align: left;
+       
         th{
             text-transform: uppercase;
             letter-spacing: 1px; 
@@ -241,6 +241,7 @@ button.main-button-table:hover{
             color: #8898AA;
             font-size: 10.4px;
             padding: 12px 24px;
+            box-sizing: border-box;
             background-color: #F6F9FC;
         }
         tr{
@@ -251,6 +252,7 @@ button.main-button-table:hover{
         td{
             font-size: 13px;
             padding: 16px 24px;
+            box-sizing: border-box;
             color:#525F7F;
             font-weight: 400;
             span{
@@ -267,7 +269,52 @@ button.main-button-table:hover{
     width: 100% !important;
     height: 400px !important;
     overflow: hidden !important;
+    // padding: 20px;
 }
-// @media sreen and (min-width: 768px){
-//     body{background-color: red;}
-// }
+
+.moblie{
+    display: none;
+}
+@media screen and (max-width:1024px){
+    .col.is-4{
+        width: 50%;
+    }
+    .col.is-7,.col.is-3{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .col.is-3{
+        margin-top: 0 !important;
+    }
+    .home-box-table{
+        margin:0
+    }
+    
+   
+
+}
+@media screen and (max-width:768px){
+    .col.is-4{
+        width: 100%;
+    }
+    .app-body{
+        margin: 0;
+    }
+    .input-search {
+    width: auto;
+    }
+    .desktop{
+        display: none !important;
+    }
+    .moblie{
+        display: block !important;
+    }
+    .home-chart-line-box-title{
+        .right{
+            display: flex;
+        }
+    }
+    .home-chart-line-box, .home-chart-bar-box{
+        margin: 0 !important;
+    }
+}
