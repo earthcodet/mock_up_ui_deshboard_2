@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import '../CSS/SideBar.scss'
 import { NavLink, withRouter } from 'react-router-dom'
 import PropTypes from "prop-types";
+import $ from 'jquery'
 class MainSideBar extends Component {
     static propTypes = {
         match: PropTypes.object.isRequired,
@@ -16,11 +17,24 @@ class MainSideBar extends Component {
             ? "active"
             : "";
     }
+    onClickBarMenu = () => {
+        console.log('dasd')
+        $('.sidebar-content').toggleClass('showbar')
+    }
     render() {
         return (
             <aside className='sidebar-content'>
                 <div className='sidebar-heading'>
                     <img className='sidebar-logo-size' src='https://demos.creative-tim.com/nextjs-argon-dashboard/_next/static/images/nextjs_argon_black-00653defbe44f7b5ed0e3926ec44f265.png'></img>
+                    <i className='close-model-sidebar las la-times' onClick={() => this.onClickBarMenu()}></i>
+                </div>
+                <div className='sidebar-search-mobile' >
+                        <input type='text'  placeholder='Search'>
+                          
+                        </input>
+                        <button className='fa fa-search'>
+
+                        </button>
                 </div>
                 <div className='sidebar-body'>
                     {/* Logo and Search ( mobile )*/}

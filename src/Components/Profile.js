@@ -7,7 +7,6 @@ class Profile extends Component {
         return (
             <div className='profile-app'>
                 <MainNavBar header='user profile' />
-
                 <div className='banner-box'>
                     <span className='effect-image'></span>
                     <div className='banner-profile'>
@@ -85,7 +84,7 @@ class Profile extends Component {
                         </div>
 
                     </div>
-                    <div className='col profile-card-box'>
+                    <div className='col is-3 profile-card-box'>
                         <div className='profile-card'>
                             <div className='profile-title-detail'>
                                 <button className='button-title color-green-blue'>Connect</button>

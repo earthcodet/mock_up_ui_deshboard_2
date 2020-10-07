@@ -1,6 +1,23 @@
 .activegg{
   opacity: 1;
 }
+@keyframes show-navbar-collapse {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+      transform-origin: 100% 0; }
+    100% {
+      opacity: 1;
+      transform: scale(1); } }
+  
+  @keyframes hide-navbar-collapse {
+    from {
+      opacity: 1;
+      transform: scale(1);
+      transform-origin: 100% 0; }
+    to {
+      opacity: 0;
+      transform: scale(0.95); } }
 .sidebar-content{
     display: flex;
     flex-direction: column;
@@ -21,6 +38,36 @@
         .sidebar-logo-size{
             width: 63%;
             height: 100%;
+        }
+        .close-model-sidebar{
+            display: none;
+        }
+    }
+    .sidebar-search-mobile{
+        display: none;
+        padding: 15px 0;
+        border-radius: 4px;
+        align-items: center;
+        justify-content: center;
+        input{
+            border-top-left-radius: 6px ;
+            border-bottom-left-radius: 6px ;
+            padding: 13px 0 14px 12px;
+            background-color: white;
+            border: 1px solid #cad1d7;
+            color: #adb1b6;
+            font-size: 16px;
+            width: 100%;
+            outline: none;
+        }
+        button{
+            font-size: 17px;
+            padding:14px 14px;
+            background-color: white;
+            border:1px solid #cad1d7;
+            color: #cad1d7;
+            border-left:none;
+            outline: none;
         }
     }
     .sidebar-body{
